@@ -1,0 +1,38 @@
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap:10px;
+  word-break: break-all;
+  
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  color: white;
+  background-color: #1a1d21;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 520px;
+  border-radius: 10px;
+}
+
+.delete-button {
+  height: 30px;
+  background-color: #1a1d21;
+  border: none;
+}
+
+.bin-icon {
+  color: grey;
+  font-size: 16px;
+}
+
+.bin-icon:hover {
+  color: rgba(255, 255, 255, 0.697);
+}

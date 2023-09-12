@@ -1,0 +1,45 @@
+.box {
+  background-color: rgb(24, 21, 21);
+  max-width: 50%;
+  margin: 60px auto;
+  /* display: flex;
+  justify-content: center; */
+  border: 3px solid rgb(111, 23, 193);
+  border-radius: 10px;
+}
+
+.error-text {
+  height: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.input-button {
+  display: flex;
+  justify-content: center;
+  /* gap: 10px; */
+  margin-top: 30px;
+}
+
+input {
+  color: white;
+  background-color: #1d1e23;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  height: 30px;
+  width: 79%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.button-add {
+  color: white;
+  background-color: rgb(111, 23, 193);
+  border-radius: 0 4px 4px 0;
+  border: none;
+}
