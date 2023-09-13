@@ -1,37 +1,42 @@
 import React, { useState } from "react";
-import "./TodoList.css";
-import ListMaker from "./ListMaker";
+import "./TodoComponent.css";
+import TodoList from "../TodoList/TodoList";
 
-const TodoList = () => {
+const TodoComponent = () => {
   const [inputList, setInputList] = useState("");
   const [enteredList, setEnteredList] = useState([]);
   const [displayError, setDisplayError] = useState("");
-  const [generateColor, setGenerateColor] = useState(0); //qui
 
-  const randomColor = ["white", "red", "yellow", "blue", "pink", "green"]; //qui
+  const randomColor = ["white", "red", "yellow", "blue", "orange", "#FF1178", "#1AD617", '#01FFF4'];
+  const randomIndex = Math.floor(Math.random() * randomColor.length);
+
+  // function when user types something.
 
   const searchBar = (event) => {
     setInputList(event.target.value);
   };
+
+  // function with two outcomes: a list gets created when user entered the input. Or alternatively, an error is displayed.
 
   const addList = (event) => {
     event.preventDefault();
     if (!inputList) {
       setDisplayError("The input must not be empty!");
       setTimeout(() => setDisplayError(""), 5000);
-      return null;
+      return;
     }
 
     const newList = {
       id: Math.floor(Math.random() * 100000),
-      value: inputList
+      value: inputList,
+      color: randomColor[randomIndex],
     };
 
     setEnteredList((prev) => [...prev, newList]);
     setInputList("");
-    setGenerateColor(Math.floor(Math.random() * randomColor.length)) //qui
-
   };
+
+  // function that allows the user to delete a list when the button is clicked.
 
   const deleteList = (id) => {
     const filteredList = enteredList.filter((el) => el.id !== id);
@@ -54,13 +59,9 @@ const TodoList = () => {
           </button>
         </div>
       </form>
-      <ListMaker
-        onGeneratedColor={randomColor[generateColor]} //qui
-        onAddedList={enteredList}
-        onDeletedList={deleteList}
-      />
+      <TodoList onAddedList={enteredList} onDeletedList={deleteList} />
     </div>
   );
 };
 
-export default TodoList;
+export default TodoComponent;
