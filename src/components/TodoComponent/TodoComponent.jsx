@@ -36,7 +36,7 @@ const TodoComponent = () => {
     setInputList("");
   };
 
-  // function that allows the user to delete a list when the button is clicked.
+  // function that allows the user to delete a list upon clicking the bin button.
 
   const deleteList = (id) => {
     const filteredList = enteredList.filter((el) => el.id !== id);
