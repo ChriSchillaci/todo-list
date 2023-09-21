@@ -25,6 +25,7 @@
 }
 
 input {
+  font-family: inherit;
   color: white;
   background-color: #1d1e23;
   border: none;
@@ -38,6 +39,7 @@ input:focus {
 }
 
 .button-add {
+  font-family: inherit;
   color: white;
   background-color: rgb(111, 23, 193);
   border-radius: 0 4px 4px 0;

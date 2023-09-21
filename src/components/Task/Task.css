@@ -24,5 +24,6 @@ li {
   
   .bin-icon:hover {
     color: rgba(255, 255, 255, 0.697);
+    cursor: pointer;
   }
   
